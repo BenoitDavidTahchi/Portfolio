@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benoit David Tahchi - Portfolio</title>
+    
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-blue-600 selection:text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-40 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 font-bold text-xl tracking-tighter uppercase">
+                    Benoit David <span class="text-blue-600">Tahchi</span>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors uppercase tracking-wide">About</a>
+                    <a href="#expertise" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors uppercase tracking-wide">Expertise</a>
+                    <a href="#portfolio" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors uppercase tracking-wide">Portfolio</a>
+                    <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors uppercase tracking-wide">Experience</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2.5 rounded text-sm font-semibold hover:bg-blue-700 transition-colors">Let's Talk</a>
+                </div>
+
+                <!-- Mobile Nav Toggle -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="p-2 text-slate-600 hover:text-slate-900">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">About</a>
+                <a href="#expertise" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Expertise</a>
+                <a href="#portfolio" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Portfolio</a>
+                <a href="#experience" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Experience</a>
+                <a href="#contact" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium text-blue-600 hover:bg-blue-50 rounded-md">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 text-white">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="Gemini_Generated_Image_d4sskwd4sskwd4ss.jpg" alt="Background Architecture" 
+                 class="w-full h-full object-cover"
+                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80';" />
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium mb-6 backdrop-blur-sm border border-blue-500/30">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span>Available for new opportunities</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold tracking-tight mb-6">
+                    Architecting the <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Digital Future</span>
+                </h1>
+                <p class="text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
+                    Senior BIM Manager & Architect. Specialized in bridging design, construction, and digital strategy to drive transformation across large-scale project environments.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#portfolio" class="bg-white text-slate-900 px-6 py-3 rounded font-semibold hover:bg-slate-100 transition-colors flex items-center">
+                        View Projects
+                        <i data-lucide="chevron-right" class="w-5 h-5 ml-1"></i>
+                    </a>
+                    <a href="#contact" class="bg-transparent border border-white/30 text-white px-6 py-3 rounded font-semibold hover:bg-white/10 transition-colors">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-sm font-bold text-blue-600 tracking-widest uppercase mb-2">Executive Profile</h2>
+                    <h3 class="text-3xl font-bold mb-6 text-slate-900">Bridging Design & Digital Strategy</h3>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        Senior BIM Manager and Architect with over 20 years of international experience delivering complex Design-Build projects and leading BIM and digital transformation across Europe, the Middle East, and Asia. Specialized in BIM Level 2/3 frameworks, Autodesk Construction Cloud ecosystems, and enterprise digital workflows to improve coordination efficiency, reduce delivery risks, and enhance project performance.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="border-l-2 border-blue-600 pl-4">
+                            <div class="text-3xl font-bold text-slate-900">20+</div>
+                            <div class="text-sm text-slate-500 font-medium mt-1">Years Experience</div>
+                        </div>
+                        <div class="border-l-2 border-blue-600 pl-4">
+                            <div class="text-3xl font-bold text-slate-900">Lvl 3</div>
+                            <div class="text-sm text-slate-500 font-medium mt-1">BIM Frameworks</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden relative group">
+                        <img src="Screenshot 2026-04-11 161953.jpg" alt="AI Concept" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80';" />
+                        <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-blue-50 rounded-2xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-blue-600 tracking-widest uppercase mb-2">Core Competencies</h2>
+                <h3 class="text-3xl font-bold text-slate-900 mb-4">Digital Transformation & BIM</h3>
+                <p class="text-slate-600">
+                    Recognized for aligning multidisciplinary stakeholders and driving innovation through structured governance and advanced technology ecosystems.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">BIM Governance & Strategy</h4>
+                    <p class="text-slate-500 text-sm">Leveraging enterprise tools and AI to enhance project performance and delivery workflows.</p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="monitor-cog" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Autodesk Construction Cloud</h4>
+                    <p class="text-slate-500 text-sm">Leveraging enterprise tools and AI to enhance project performance and delivery workflows.</p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">AI-Driven Visualization</h4>
+                    <p class="text-slate-500 text-sm">Leveraging enterprise tools and AI to enhance project performance and delivery workflows.</p>
+                </div>
+                <!-- Skill 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="building-2" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Architectural Coordination</h4>
+                    <p class="text-slate-500 text-sm">Leveraging enterprise tools and AI to enhance project performance and delivery workflows.</p>
+                </div>
+                <!-- Skill 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="monitor-cog" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Digital Transformation</h4>
+                    <p class="text-slate-500 text-sm">Leveraging enterprise tools and AI to enhance project performance and delivery workflows.</p>
+                </div>
+                <!-- Skill 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">QA/QC & Model Maturity</h4>
+                    <p class="text-slate-500 text-sm">Leveraging enterprise tools and AI to enhance project performance and delivery workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h2 class="text-sm font-bold text-blue-600 tracking-widest uppercase mb-2">Selected Works</h2>
+                    <h3 class="text-3xl font-bold text-slate-900">Project Portfolio</h3>
+                </div>
+                <p class="text-slate-500 max-w-md text-sm md:text-right">
+                    Explore my digital transformation strategies, AI integrations, Autodesk Forma analyses, and structural architectural deliveries.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div id="tabs-container" class="flex flex-wrap gap-2 mb-10 border-b border-slate-200 pb-4">
+                <!-- Tabs are injected via JS -->
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projects are injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-900 text-slate-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-sm font-bold text-blue-400 tracking-widest uppercase mb-2 text-center">Career</h2>
+            <h3 class="text-3xl font-bold text-white mb-16 text-center">Professional Experience</h3>
+            
+            <div class="space-y-12">
+                <!-- Experience 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:grid md:grid-cols-4 md:gap-8 items-start">
+                        <div class="md:col-span-1 mb-4 md:mb-0 md:text-right">
+                            <div class="text-blue-400 font-mono text-sm tracking-widest font-bold sticky top-24">Apr 2021 – Present</div>
+                        </div>
+                        <div class="md:col-span-3 relative">
+                            <div class="absolute -left-10 md:-left-[2.35rem] top-1.5 w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)] border-2 border-slate-900"></div>
+                            <div class="absolute -left-[2.15rem] md:-left-[2.15rem] top-4 bottom-[-3rem] w-0.5 bg-slate-800"></div>
+                            
+                            <h4 class="text-xl font-bold text-white mb-1">Senior BIM Manager | Design & Digital Transformation Lead</h4>
+                            <div class="text-slate-400 font-medium mb-4 uppercase text-sm tracking-wide">CFL-IMMO – LUXEMBOURG</div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start text-sm md:text-base text-slate-400">
+                                    <span class="mr-3 text-blue-500 mt-1.5 text-[10px]">■</span>
+                                    <span class="leading-relaxed">Leading BIM strategy and architectural coordination for large-scale mixed-use developments (100,000+ sqm).</span>
+                                </li>
+                                <li class="flex items-start text-sm md:text-base text-slate-400">
+                                    <span class="mr-3 text-blue-500 mt-1.5 text-[10px]">■</span>
+                                    <span class="leading-relaxed">Driving implementation of Autodesk Construction Cloud, structuring workflows, approvals, and collaboration processes.</span>
+                                </li>
+                                <li class="flex items-start text-sm md:text-base text-slate-400">
+                                    <span class="mr-3 text-blue-500 mt-1.5 text-[10px]">■</span>
+                                    <span class="leading-relaxed">Defining BIM governance frameworks including QA/QC, KPIs, and coordination protocols.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:grid md:grid-cols-4 md:gap-8 items-start">
+                        <div class="md:col-span-1 mb-4 md:mb-0 md:text-right">
+                            <div class="text-blue-400 font-mono text-sm tracking-widest font-bold sticky top-24">Prior to 2021</div>
+                        </div>
+                        <div class="md:col-span-3 relative">
+                            <div class="absolute -left-10 md:-left-[2.35rem] top-1.5 w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)] border-2 border-slate-900"></div>
+                            
+                            <h4 class="text-xl font-bold text-white mb-1">Architect & BIM Manager (20+ Years)</h4>
+                            <div class="text-slate-400 font-medium mb-4 uppercase text-sm tracking-wide">Various International Projects</div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start text-sm md:text-base text-slate-400">
+                                    <span class="mr-3 text-blue-500 mt-1.5 text-[10px]">■</span>
+                                    <span class="leading-relaxed">Led BIM and digital transformation initiatives across multi-project environments (Amazon EU, etc.).</span>
+                                </li>
+                                <li class="flex items-start text-sm md:text-base text-slate-400">
+                                    <span class="mr-3 text-blue-500 mt-1.5 text-[10px]">■</span>
+                                    <span class="leading-relaxed">Delivered complex Design-Build projects including international airport terminals, large-scale arenas, and high-rise developments.</span>
+                                </li>
+                                <li class="flex items-start text-sm md:text-base text-slate-400">
+                                    <span class="mr-3 text-blue-500 mt-1.5 text-[10px]">■</span>
+                                    <span class="leading-relaxed">Introduced AI-driven visualization and digital workflows to improve design efficiency.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-600 rounded-3xl p-8 md:p-16 text-white text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=1200&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Next Project?</h2>
+                    <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">
+                        Whether you're looking to implement enterprise BIM workflows or need architectural leadership on a complex development, let's connect.
+                    </p>
+                    
+                    <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
+                        <a href="mailto:benoit_david_tahchi@hotmail.fr" class="flex items-center justify-center gap-3 hover:text-blue-200 transition-colors group">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-lg">benoit_david_tahchi@hotmail.fr</span>
+                        </a>
+                        <a href="tel:+352621692812" class="flex items-center justify-center gap-3 hover:text-blue-200 transition-colors group">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-lg">+352 621 692 812</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <div class="font-bold text-white text-xl tracking-tighter uppercase mb-2">
+                    Benoit David <span class="text-blue-600">Tahchi</span>
+                </div>
+                <p class="text-sm">Senior BIM Manager | Architect</p>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="https://www.linkedin.com/in/benoit-david-tahchi-58b9661/?skipRedirect=true" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    <span class="text-sm">Luxembourg</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-slate-800 text-sm text-center md:text-left text-slate-500">
+            © <span id="year"></span> Benoit David Tahchi. All rights reserved. Architecture & Digital Transformation.
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/95 items-center justify-center backdrop-blur-sm" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors p-2" onclick="closeLightbox(event)">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        
+        <button id="lightbox-prev" class="absolute left-6 text-white hover:text-gray-300 p-4" onclick="prevImage(event)">
+            <i data-lucide="chevron-right" class="w-10 h-10 rotate-180"></i>
+        </button>
+
+        <img id="lightbox-img" src="" alt="Gallery preview" class="max-h-[90vh] max-w-[90vw] object-contain" onclick="event.stopPropagation()" />
+
+        <button id="lightbox-next" class="absolute right-6 text-white hover:text-gray-300 p-4" onclick="nextImage(event)">
+            <i data-lucide="chevron-right" class="w-10 h-10"></i>
+        </button>
+        
+        <div id="lightbox-counter" class="absolute bottom-6 text-white text-sm font-mono tracking-widest"></div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- DATA ---
+        const PROJECTS = [
+            {
+                id: 1,
+                title: "Sihanouk International Airport",
+                category: "Reference Projects",
+                description: "Delivery of a complex international airport terminal utilizing advanced BIM Level 2/3 frameworks to ensure alignment across Architecture, Structure, MEP, and BHS teams.",
+                coverImage: "Gemini_Generated_Image_z5b58iz5b58iz5b5.jpg",
+                gallery: [
+                    "Gemini_Generated_Image_z5b58iz5b58iz5b5.jpg",
+                    "KOS-3.jpg",
+                    "KOS-7.jpg"
+                ]
+            },
+            {
+                id: 2,
+                title: "Beirut Global University",
+                category: "AI Renderings",
+                description: "Innovation campus design showcasing the integration of AI-driven visualization to improve design efficiency, decision-making, and aesthetic coherence in educational spaces.",
+                coverImage: "Gemini_Generated_Image_d4sskwd4sskwd4ss.jpg",
+                gallery: [
+                    "Gemini_Generated_Image_d4sskwd4sskwd4ss.jpg",
+                    "Gemini_Generated_Image_22yylb22yylb22yy.jpg",
+                    "Gemini_Generated_Image_2gv0lf2gv0lf2gv0.jpg"
+                ]
+            },
+            {
+                id: 3,
+                title: "Project Management Hub",
+                category: "Digital Dashboards",
+                description: "Interactive dashboards tracking list of drawings, workflows, issue resolution, model maturity, and overall management metrics.",
+                coverImage: "R.jpg",
+                gallery: ["R.jpg"]
+            },
+            {
+                id: 4,
+                title: "Urban Planning & Sustainability",
+                category: "Autodesk Forma",
+                description: "Early-stage site planning and sustainability analysis utilizing Autodesk Forma for rapid optioneering and environmental impact assessments.",
+                coverImage: "image.jpg",
+                gallery: ["image.jpg"]
+            },
+            {
+                id: 5,
+                title: "Biomimetic Concept Architecture",
+                category: "AI Renderings",
+                description: "Exploration of biomimetic forms and advanced structural geometries using AI-assisted digital workflows.",
+                coverImage: "Screenshot 2026-04-11 161953.jpg",
+                gallery: ["Screenshot 2026-04-11 161953.jpg"]
+            }
+        ];
+
+        const CATEGORIES = ["All", "AI Renderings", "Autodesk Forma", "Digital Dashboards", "Reference Projects"];
+        
+        let activeTab = "All";
+        let currentGallery = [];
+        let currentIndex = 0;
+
+        // Set current year in footer
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        // --- MOBILE MENU LOGIC ---
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- PORTFOLIO LOGIC ---
+        function renderTabs() {
+            const container = document.getElementById('tabs-container');
+            container.innerHTML = '';
+            
+            CATEGORIES.forEach(cat => {
+                const btn = document.createElement('button');
+                const isActive = activeTab === cat;
+                
+                btn.className = `px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  isActive 
+                    ? "bg-blue-600 text-white shadow-md" 
+                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                }`;
+                btn.innerText = cat;
+                btn.onclick = () => {
+                    activeTab = cat;
+                    renderTabs();
+                    renderProjects();
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        function renderProjects() {
+            const grid = document.getElementById('projects-grid');
+            grid.innerHTML = '';
+            
+            const filtered = PROJECTS.filter(p => activeTab === "All" || p.category === activeTab);
+            
+            filtered.forEach((project, idx) => {
+                const isLarge = (activeTab === "All" && (idx === 0 || idx === 3)) ? 'md:col-span-2 lg:col-span-2' : '';
+                const badge = project.gallery.length > 1 ? `<span class="bg-blue-600/30 px-2 py-0.5 rounded text-[10px] text-white backdrop-blur-sm">${project.gallery.length} Images</span>` : '';
+                
+                // Fallback image URL is used if the local image file is not found
+                const fallbackUrl = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80";
+
+                const card = document.createElement('div');
+                card.className = `group cursor-pointer relative overflow-hidden rounded-xl bg-slate-100 aspect-[4/3] ${isLarge}`;
+                card.onclick = () => openLightbox(project.id);
+                
+                card.innerHTML = `
+                    <img src="${project.coverImage}" alt="${project.title}" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='${fallbackUrl}';" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="text-blue-300 text-xs font-bold tracking-wider uppercase mb-2 flex items-center gap-2">
+                            ${project.category}
+                            ${badge}
+                        </div>
+                        <h4 class="text-white text-xl font-bold mb-2">${project.title}</h4>
+                        <p class="text-slate-300 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            ${project.description}
+                        </p>
+                    </div>
+                    
+                    <div class="absolute top-4 right-4 bg-white/10 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                        <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            // Re-render icons for new HTML elements
+            lucide.createIcons();
+        }
+
+        // --- LIGHTBOX LOGIC ---
+        function openLightbox(id) {
+            const project = PROJECTS.find(p => p.id === id);
+            if(!project) return;
+            
+            currentGallery = project.gallery;
+            currentIndex = 0;
+            
+            updateLightbox();
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+        }
+
+        function closeLightbox(e) {
+            if(e) e.stopPropagation();
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+        }
+
+        function nextImage(e) {
+            if(e) e.stopPropagation();
+            currentIndex = (currentIndex + 1) % currentGallery.length;
+            updateLightbox();
+        }
+
+        function prevImage(e) {
+            if(e) e.stopPropagation();
+            currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+            updateLightbox();
+        }
+
+        function updateLightbox() {
+            const img = document.getElementById('lightbox-img');
+            img.src = currentGallery[currentIndex];
+            
+            // Setup fallback for lightbox image too
+            img.onerror = function() {
+                this.onerror = null;
+                this.src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80";
+            };
+
+            const counter = document.getElementById('lightbox-counter');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+
+            if (currentGallery.length > 1) {
+                counter.style.display = 'block';
+                prevBtn.style.display = 'block';
+                nextBtn.style.display = 'block';
+                counter.innerText = `${currentIndex + 1} / ${currentGallery.length}`;
+            } else {
+                counter.style.display = 'none';
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            }
+        }
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTabs();
+            renderProjects();
+            lucide.createIcons(); // Initialize all icons on load
+        });
+
+        // Setup keyboard navigation for lightbox
+        window.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if(!lb.classList.contains('hidden')) {
+                if(e.key === 'Escape') closeLightbox();
+                if(e.key === 'ArrowRight') nextImage();
+                if(e.key === 'ArrowLeft') prevImage();
+            }
+        });
+    </script>
+</body>
+</html>
