@@ -114,7 +114,7 @@
                 </div>
                 <div class="relative">
                     <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden relative group">
-                        <img src="Screenshot 2026-04-11 161953.jpg" alt="AI Concept" 
+                        <img src="Baabdath_Eco_Resort_Render.jpg" alt="AI Concept" 
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80';" />
                         <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
